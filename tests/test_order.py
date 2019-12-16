@@ -403,7 +403,7 @@ def test_update_order_prices(order_with_lines):
     assert line_1.unit_price == price_1
     assert line_2.unit_price == price_2
     assert order_with_lines.shipping_price == shipping_price
-    total = line_1.quantity * price_1 + line_2.quantity * price_2 + shipping_price
+    total =  price_1 + price_2 + shipping_price
     assert order_with_lines.total == total
 
 
